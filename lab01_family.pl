@@ -72,6 +72,7 @@ sister(X,Y) :-
 	father(J,X),
 	female(X),
 	father(J,Y),
+ X \= Y,
 	mother(I,X),
 	mother(I,Y).
 
@@ -80,12 +81,14 @@ step_sister(X,Y) :-
 	parent(I,X),
 	parent(I,Y),
 	parent(J,X),
+ X \= Y,
 	\+ parent(J,Y).
 
 brother(X,Y) :-
 	father(J,X),
 	male(X),
 	father(J,Y),
+ X \= Y,
 	mother(I,X),
 	mother(I,Y).
 
@@ -93,6 +96,7 @@ step_broter(X,Y) :-
 	male(X),
 	parent(I,X),
 	parent(I,Y),
+ X \= Y,
 	parent(J,X),
 	\+ parent(J,Y).
 
