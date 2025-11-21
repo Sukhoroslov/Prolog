@@ -28,8 +28,6 @@
 % You do the same for every predicate for every exercise in the portfolio
 
 % EXERCISE NUMBER: 1
-
-% FACTS:
   
 % Folder facts
 folder(root1).
@@ -159,9 +157,9 @@ false.
 
 
 
-% ---------------------------------------------
+% EXERCISE NUMBER: 3
+
 % Part (a): At least ten product/4 facts
-% ---------------------------------------------
 
 product(lenovo,856296,laptop,750).
 product(dell,017856,laptop,820).
@@ -217,4 +215,5 @@ all_buys_year(Year,user(Buyer),bought(Brand,ID)) :-
     purchase(user(Buyer),bought(Brand,ID),date(_,_,Year)).
 
 % Example query:
+
 % ?- all_buys_year(2023,U,X).
